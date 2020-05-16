@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='./styles.css'>
+        <script src='https://unpkg.com/vue/dist/vue.js' defer></script>
+        <script src='./app.js' defer></script>
+        <title>Vue Lesson 2</title>
+    </head>
+    <body>
+        <div id='app' style='padding-left: 5rem;'>
+            <div 
+                @click='attachRed = !attachRed'
+                :class='divClasses'
+            ></div>
+            <div 
+                @click='attachBlue = !attachBlue'
+                :class='{blue: attachBlue, black: !attachBlue}'
+            ></div>
+            <div :class='color'></div>
+            <div :style="{backgroundColor: colorGray, height: '100px', width: '100px'}"></div>
+            <div :style='myStyle'></div>
+            <div :style='[myStyle, {marginTop: "10px"}]'></div>
+        </div>
+    </body>
+</html>
