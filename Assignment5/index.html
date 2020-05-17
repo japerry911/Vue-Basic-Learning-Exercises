@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src='https://unpkg.com/vue/dist/vue.js' defer></script>
+        <script src='./app.js' defer></script>
+        <title>Vue Assignment 5</title>
+    </head>
+    <body>
+        <div id='exercise' style='padding-left: 5rem;'>
+            <div>
+                <button @click='show = !show'>Toggle If</button>
+                <p v-if='show'>You either see me ...</p>
+                <p v-else>... or me</p>
+            </div>
+            <hr>
+            <div>
+                <button @click='show2 = !show2'>Toggle Show</button>
+                <p v-show='show2'>You either see me ...</p>
+                <p v-show='!show2'>... or me</p>
+            </div>
+            <hr>
+            <div>
+                <ul>
+                    <li v-for='(value, i) in arraySky'>{{ value }} - {{ i }}</li>
+                </ul>
+            </div>
+            <hr>
+            <div>
+                <ul>
+                    <li v-for='(value, key, i) in object1'>{{ key }} - {{ value }} - {{ i }}</li>
+                </ul>
+            </div>
+            <hr>
+            <div>
+                <ul>
+                    <template v-for='value in object2'>
+                        <li v-if='Array.isArray(value)'>
+                            <ul>
+                                <li v-for='innerValue in value'>{{ innerValue }}</li>
+                            </ul>
+                        </li>
+                        <li v-else>{{ value }}</li>
+                    </template>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
