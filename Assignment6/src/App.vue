@@ -2,21 +2,13 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <header>
-                    <h1>Server Status</h1>
-                </header>
+                <vueHeader></vueHeader>
             </div>
         </div>
         <hr>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <ul class="list-group">
-                    <li
-                            class="list-group-item"
-                            v-for="index in 5">
-                        Server #{{ index }}
-                    </li>
-                </ul>
+                <servers></servers>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <p>Server Details are currently not updated</p>
@@ -25,9 +17,7 @@
         <hr>
         <div class="row">
             <div class="col-xs-12">
-                <footer>
-                    <p>All Servers are managed here</p>
-                </footer>
+                <vueFooter></vueFooter>
             </div>
         </div>
     </div>
